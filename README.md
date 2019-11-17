@@ -1,8 +1,8 @@
 # NewsFeedApp
 
-Setup:
+<br Setup: />
+<br 1.Import existing project in your IDE />
 
-1.Import existing project in your IDE
 2.Run demo
 3.Login to database:
 	-Enter http://localhost:8080/h2-console in your browser
