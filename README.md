@@ -3,7 +3,7 @@
 Setup:
 
 1. Import the project as an existing maven project in your IDE
-2. Run demo as Spring Boot App
+2. Run the project as Spring Boot App
 3. Login to H2 database:
 	- Enter http://localhost:8080/h2-console in your browser
 	- Enter the following for:\
