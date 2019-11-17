@@ -6,7 +6,7 @@ Setup:
 2. Run demo as Spring Boot App
 3. Login to H2 database:
 	- Enter http://localhost:8080/h2-console in your browser
-	- Enter the following for:
+	- Enter the following for:\
 		JDBC URL: jdbc:h2:mem:test\
 		User Name: root\
 		Password: [leave empty]
