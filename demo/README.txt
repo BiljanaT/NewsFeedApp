@@ -1,3 +1,6 @@
+Spring Boot application that will poll a news feed every 5 minutes and stores any changes in
+a in memory database
+
 Setup:
 
 1. Import the project as an existing maven project in your IDE
