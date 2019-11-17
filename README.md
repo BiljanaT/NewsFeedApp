@@ -9,6 +9,6 @@ Setup:
 	- Enter the following for:
 		JDBC URL: jdbc:h2:mem:test\
 		User Name: root\
-		Password: [leave empty]\
+		Password: [leave empty]
 	- Connect
 4. Select the ITEM table. SELECT * FROM ITEM statement will be automatically generated in the console. Run the statement
