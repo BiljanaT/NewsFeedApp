@@ -1,4 +1,5 @@
 # NewsFeedApp
+Spring Boot application that will poll a news feed every 5 minutes and stores any changes in a in memory database
 
 Setup:
 
