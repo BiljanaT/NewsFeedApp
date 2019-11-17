@@ -1,0 +1,8 @@
+com/biljana/demo/entity/Item.class
+com/biljana/demo/entity/Enclosure.class
+com/biljana/demo/service/ItemService.class
+com/biljana/demo/controller/ItemController.class
+com/biljana/demo/DemoApplication.class
+com/biljana/demo/model/Channel.class
+com/biljana/demo/model/Rss.class
+com/biljana/demo/repository/ItemRepository.class
