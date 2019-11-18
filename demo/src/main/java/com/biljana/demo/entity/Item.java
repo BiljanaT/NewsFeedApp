@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.time.ZonedDateTime;
 import java.util.Objects;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Lob;
@@ -13,6 +14,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
+import com.biljana.demo.model.Enclosure;
 import com.biljana.demo.util.ZonedDateTimeAdapter;
 
 @Entity
@@ -25,18 +27,26 @@ public class Item implements Serializable {
 	@Id
 	private String guid;
 
+	@Column(nullable = false)
 	private String title;
 
+	@Column(nullable = false)
 	private String link;
 
 	@Lob
+	@Column(nullable = false)
 	private String description;
 
+	@Column(nullable = false)
 	private String imageUrl;
+
+	@Column(nullable = false)
+	private String imageContentType;
 
 	@Transient
 	private Enclosure enclosure;
 
+	@Column(nullable = false)
 	@XmlJavaTypeAdapter(ZonedDateTimeAdapter.class)
 	private ZonedDateTime pubDate;
 
@@ -44,11 +54,11 @@ public class Item implements Serializable {
 
 	}
 
-	public String getId() {
+	public String getGuid() {
 		return guid;
 	}
 
-	public void setId(String guid) {
+	public void setGuid(String guid) {
 		this.guid = guid;
 	}
 
@@ -92,6 +102,14 @@ public class Item implements Serializable {
 		this.imageUrl = imageUrl;
 	}
 
+	public String getImageContentType() {
+		return imageContentType;
+	}
+
+	public void setImageContentType(String imageContentType) {
+		this.imageContentType = imageContentType;
+	}
+
 	public Enclosure getEnclosure() {
 		return enclosure;
 	}
@@ -120,6 +138,6 @@ public class Item implements Serializable {
 	@Override
 	public String toString() {
 		return "Item [guid=" + guid + ", title=" + title + ", link=" + link + ", description=" + description
-				+ ", imageUrl=" + imageUrl + ", pubDate=" + pubDate + "]";
+				+ ", imageUrl=" + imageUrl + ", imageContentType=" + imageContentType + ", pubDate=" + pubDate + "]";
 	}
 }

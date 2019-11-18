@@ -1,5 +1,4 @@
-Spring Boot application that polls a news feed every 5 minutes and stores the changes in
-a in memory database
+Spring Boot application that polls a news feed every 5 minutes and stores the changes in a in memory database
 
 Setup:
 

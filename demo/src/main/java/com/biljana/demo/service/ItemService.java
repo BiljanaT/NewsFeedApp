@@ -29,6 +29,7 @@ public class ItemService {
 
 		rss.getChannel().getItem().forEach(i -> {
 			i.setImageUrl(i.getEnclosure().getUrl());
+			i.setImageContentType(i.getEnclosure().getType());
 		});
 
 		itemRepository.saveAll(rss.getChannel().getItem());

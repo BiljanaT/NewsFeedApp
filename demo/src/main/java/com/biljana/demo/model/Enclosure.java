@@ -1,4 +1,4 @@
-package com.biljana.demo.entity;
+package com.biljana.demo.model;
 
 import java.io.Serializable;
 
@@ -16,6 +16,9 @@ public class Enclosure implements Serializable {
 	@XmlAttribute
 	private String url;
 
+	@XmlAttribute
+	private String type;
+
 	public Enclosure() {
 
 	}
@@ -26,6 +29,14 @@ public class Enclosure implements Serializable {
 
 	public void setUrl(String url) {
 		this.url = url;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
 	}
 
 }
