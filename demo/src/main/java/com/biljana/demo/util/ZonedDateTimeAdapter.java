@@ -7,16 +7,16 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 
 public class ZonedDateTimeAdapter extends XmlAdapter<String, ZonedDateTime> {
 
-	private DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("E, d MMM yyyy HH:mm:ss Z");
+	private final DateTimeFormatter dateTimeFormat = DateTimeFormatter.ofPattern("E, d MMM yyyy HH:mm:ss Z");
 
 	@Override
-	public ZonedDateTime unmarshal(String zonedDateTime) throws Exception {
-		return ZonedDateTime.parse(zonedDateTime, dateFormat);
+	public ZonedDateTime unmarshal(String xml) throws Exception {
+		return ZonedDateTime.parse(xml, dateTimeFormat);
 	}
 
 	@Override
-	public String marshal(ZonedDateTime zonedDateTime) throws Exception {
-		return zonedDateTime.format(dateFormat);
+	public String marshal(ZonedDateTime object) throws Exception {
+		return dateTimeFormat.format(object);
 	}
 
 }
