@@ -10,13 +10,13 @@ public class ZonedDateTimeAdapter extends XmlAdapter<String, ZonedDateTime> {
 	private final DateTimeFormatter dateTimeFormat = DateTimeFormatter.ofPattern("E, d MMM yyyy HH:mm:ss Z");
 
 	@Override
-	public ZonedDateTime unmarshal(String xml) throws Exception {
-		return ZonedDateTime.parse(xml, dateTimeFormat);
+	public ZonedDateTime unmarshal(String zonedDateTime) throws Exception {
+		return ZonedDateTime.parse(zonedDateTime, dateTimeFormat);
 	}
 
 	@Override
-	public String marshal(ZonedDateTime object) throws Exception {
-		return dateTimeFormat.format(object);
+	public String marshal(ZonedDateTime zonedDateTime) throws Exception {
+		return dateTimeFormat.format(zonedDateTime);
 	}
 
 }
